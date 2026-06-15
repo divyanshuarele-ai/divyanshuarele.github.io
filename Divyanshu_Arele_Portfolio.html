@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Divyanshu Arele | GIS & Remote Sensing Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts: Inter & fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eef2f5;
+      font-family: 'Inter', sans-serif;
+      color: #1a2c3e;
+      line-height: 1.45;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+
+    /* header section with modern gradient */
+    .header {
+      background: linear-gradient(135deg, #0b2b3b 0%, #1b4f6e 100%);
+      color: white;
+      padding: 2rem 2.2rem 1.8rem;
+    }
+
+    .name-title h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.3rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(4px);
+      border-radius: 40px;
+      padding: 0.3rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.8rem 1rem;
+      border-radius: 48px;
+      width: fit-content;
+    }
+
+    .contact-info a {
+      color: white;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.2s;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+      opacity: 0.85;
+    }
+
+    .contact-info i {
+      font-size: 1rem;
+      width: 20px;
+    }
+
+    /* objective */
+    .objective {
+      background: #f8fafc;
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid #e2edf2;
+    }
+
+    .objective p {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #1e4a6b;
+      border-left: 4px solid #2c7da0;
+      padding-left: 1rem;
+      margin: 0;
+    }
+
+    /* main layout */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 2.1fr;
+      gap: 0;
+    }
+
+    /* left sidebar (darker subtle) */
+    .sidebar {
+      background: #f9fdfe;
+      border-right: 1px solid #e0edf2;
+      padding: 1.8rem 1.5rem;
+    }
+
+    .right-content {
+      background: white;
+      padding: 1.8rem 2rem;
+    }
+
+    /* section styles */
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #155f7c;
+      border-bottom: 3px solid #cbdde6;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title i {
+      color: #2c7da0;
+      font-size: 1.2rem;
+      width: 28px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-tag {
+      background: #e4f0f5;
+      color: #155f7c;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .edu-item {
+      margin-bottom: 1rem;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      color: #0e4b66;
+    }
+
+    .edu-detail {
+      font-size: 0.85rem;
+      color: #2c5368;
+      display: block;
+    }
+
+    .year {
+      font-size: 0.75rem;
+      color: #5c7f8e;
+      margin-left: 0.5rem;
+      font-weight: 400;
+    }
+
+    .exp-item, .project-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .exp-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.4rem;
+    }
+
+    .exp-role {
+      font-weight: 800;
+      font-size: 1rem;
+      color: #0a3a4f;
+    }
+
+    .exp-date {
+      font-size: 0.75rem;
+      background: #eef3f6;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      color: #1d6f8f;
+    }
+
+    .exp-org {
+      font-weight: 600;
+      color: #2c7da0;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    .exp-desc {
+      font-size: 0.88rem;
+      color: #2c4e62;
+      line-height: 1.45;
+      margin-left: 0rem;
+      padding-left: 0rem;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #1b5f7c;
+      margin-bottom: 0.3rem;
+      display: inline-block;
+      background: #ecf5f9;
+      padding: 0.15rem 0.8rem;
+      border-radius: 20px;
+    }
+
+    .project-desc {
+      font-size: 0.86rem;
+      margin-top: 0.4rem;
+      color: #1d4b62;
+      line-height: 1.45;
+    }
+
+    hr {
+      margin: 1rem 0;
+      border: 0;
+      height: 1px;
+      background: #dce9ef;
+    }
+
+    .achievement {
+      background: #f1f9fe;
+      padding: 0.5rem 1rem;
+      border-radius: 18px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+
+    @media (max-width: 780px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        border-right: 0;
+        border-bottom: 1px solid #e0edf2;
+      }
+      .header {
+        padding: 1.5rem;
+      }
+      .name-title h1 {
+        font-size: 2rem;
+      }
+      .right-content, .sidebar {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- header: name + contact -->
+  <div class="header">
+    <div class="name-title">
+      <h1>Divyanshu Arele</h1>
+      <div class="badge">
+        <i class="fas fa-map-marker-alt"></i> GIS Professional | Remote Sensing Expert
+      </div>
+    </div>
+    <div class="contact-info">
+      <span><i class="fas fa-map-pin"></i> 111 Kesli, Sagar, Madhya Pradesh - 470235</span>
+      <span><i class="fas fa-phone-alt"></i> +91 9755838568</span>
+      <span><i class="fas fa-envelope"></i> divyanshuarele@gmail.com</span>
+    </div>
+  </div>
+
+  <!-- objective statement -->
+  <div class="objective">
+    <p><i class="fas fa-bullseye" style="margin-right: 8px; color:#2c7da0;"></i> I seek challenging opportunities where I can fully use my skills for the success of the organization.</p>
+  </div>
+
+  <div class="main-grid">
+    <!-- LEFT SIDEBAR: Skills, Education, Achievements -->
+    <div class="sidebar">
+      <!-- Skills -->
+      <div class="section">
+        <div class="section-title">
+          <i class="fas fa-code-branch"></i> <span>Technical Skills</span>
+        </div>
+        <div class="skill-list">
+          <span class="skill-tag">ArcGIS</span>
+          <span class="skill-tag">ArcGIS Pro</span>
+          <span class="skill-tag">ArcGIS Enterprise</span>
+          <span class="skill-tag">QGIS</span>
+          <span class="skill-tag">ERDAS Imagine</span>
+          <span class="skill-tag">AutoCAD</span>
+          <span class="skill-tag">Google Earth Pro</span>
+          <span class="skill-tag">Microsoft Office / Excel</span>
+          <span class="skill-tag">Spatial Analysis</span>
+          <span class="skill-tag">NDVI / NDWI / NDBI</span>
+          <span class="skill-tag">LULC & Change Detection</span>
+          <span class="skill-tag">Object-Based Classification</span>
+          <span class="skill-tag">Drone Data Integration</span>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="section">
+        <div class="section-title">
+          <i class="fas fa-graduation-cap"></i> <span>Education</span>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">PG Diploma in Geoinformatics</div>
+          <div class="edu-detail">IGNOU <span class="year">2025</span> | 70.98%</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Masters in Geography</div>
+          <div class="edu-detail">Barkatullah University, Bhopal <span class="year">2022</span> | 71.10%</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">B.Sc. (Physics, Chemistry, Math)</div>
+          <div class="edu-detail">Barkatullah University, Bhopal <span class="year">2019</span> | 63.59%</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Diploma in Computer Application</div>
+          <div class="edu-detail">M.C.U., Bhopal <span class="year">2017</span> | 64.71%</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Higher Secondary (PCM)</div>
+          <div class="edu-detail">M.P Board <span class="year">2016</span> | 87.2%</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Secondary Education</div>
+          <div class="edu-detail">M.P Board <span class="year">2014</span> | 86.5%</div>
+        </div>
+      </div>
+
+      <!-- Achievements & Awards -->
+      <div class="section">
+        <div class="section-title">
+          <i class="fas fa-trophy"></i> <span>Achievements</span>
+        </div>
+        <div class="achievement">
+          <i class="fas fa-award"></i> M.P SET Qualified
+        </div>
+      </div>
+
+      <!-- extra: core competencies badge style -->
+      <div class="section">
+        <div class="section-title">
+          <i class="fas fa-globe-asia"></i> <span>Core Focus</span>
+        </div>
+        <div class="skill-list">
+          <span class="skill-tag">Satellite Imagery Processing</span>
+          <span class="skill-tag">Georeferencing & Digitization</span>
+          <span class="skill-tag">LULC Mapping</span>
+          <span class="skill-tag">QA/QC Reports</span>
+          <span class="skill-tag">Environmental Change Assessment</span>
+          <span class="skill-tag">Hydrographic Mapping</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT: Experience & Projects -->
+    <div class="right-content">
+      <!-- Experience -->
+      <div class="section">
+        <div class="section-title">
+          <i class="fas fa-briefcase"></i> <span>Professional Experience</span>
+        </div>
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">GIS Executive (Remote Sensing & GIS Specialist)</span>
+            <span class="exp-date">20/02/2023 – Till Date</span>
+          </div>
+          <div class="exp-org">Madhya Pradesh State Electronics and Development Corporation Ltd. (MPSEDC)</div>
+          <div class="exp-desc">
+            3+ years of expertise in RS & GIS field with specialization in Spatial Analysis, Satellite Imagery Processing, Georeferencing, Digitization & Features Extraction, NDVI Analysis, LULC Mapping, Environmental Change Assessment, QA/QC Report Creation using ArcGIS, ArcGIS Pro, QGIS, and ERDAS Imagine.
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects: detailed -->
+      <div class="section">
+        <div class="section-title">
+          <i class="fas fa-drafting-compass"></i> <span>Key Projects & Technical Initiatives</span>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">🗺️ WEBGIS KHASRA – Georeferencing & Vectorization</div>
+          <div class="project-desc">Georeferenced cadastral (Khasra) maps by aligning scanned land records with real-world coordinates. Performed vectorization of land parcels, data download/upload on Madhya Pradesh Government Portal.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">📍 MPSEDC Data Updation (POI) – QA/QC for Version 7</div>
+          <div class="project-desc">Performed Quality Assurance & Control for Point of Interest (POI) data updates: verification of POI locations/attributes, correction of incorrect records, addition of new POIs, removal of duplicates, ensuring spatial & attribute accuracy.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">🏞️ IGRS-Sampada 2.0 – GL Data Mapping & Boundary Correction</div>
+          <div class="project-desc">Government Land (GL) data mapping and spatial correction: parcel mapping & validation, boundary correction, geometry modification, updating GIS databases according to revised land records and administrative boundaries.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">🌾 Habitation Change Detection (IGRS-Sampada 2.0)</div>
+          <div class="project-desc">Conducted habitation & settlement change detection using LISS-IV satellite imagery (2022–2024): multi-temporal image comparison, settlement extraction & mapping, change detection analysis, land cover categorization.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">💧 Land Use Land Cover – Stream Digitization & Hydrographic Update</div>
+          <div class="project-desc">Digitized stream networks using high-resolution satellite imagery across multiple districts: stream network extraction, new channel digitization, validation of existing drainage networks, hydrographic database updating.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">🌳 LULC Change Detection (Level1) – Forest & Water Bodies</div>
+          <div class="project-desc">Performed forest cover and water body change detection using multi-temporal imagery: forest cover mapping, water body monitoring, land cover classification, environmental and natural resource analysis.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">🤖 LULC Automation – Object-Based Classification</div>
+          <div class="project-desc">Developed automated workflows for Land Use Land Cover classification using Object-Based Image Analysis (OBIA): image segmentation, feature extraction, accuracy assessment and validation.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">📊 Spectral Index Analysis (NDVI, NDWI, NDBI)</div>
+          <div class="project-desc">Performed image enhancement and transformation techniques for vegetation, water and built-up indices: NDVI, NDWI, NDBI analysis for land cover insights.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">🌽 Photo Analytics – Crop Identification & Agricultural Analysis</div>
+          <div class="project-desc">Photo cleaning and agricultural pattern analysis, crop identification using remote sensing techniques, supporting precision agriculture.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">🛸 Drone As A Service – Feature Extraction & GIS Integration</div>
+          <div class="project-desc">Extraction of road features & tree plantation point mapping from drone and satellite imagery, integration with GIS layers for infrastructure planning.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">🌿 Epco Wetland Change Assessment (AI/ML based)</div>
+          <div class="project-desc">Wetland change assessment using multi-temporal satellite imagery, GIS techniques, and AI/ML object-oriented classification methods. Generated technical reports and GIS map layouts for stakeholders.</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">📑 Report Creation & Cartographic Outputs</div>
+          <div class="project-desc">Prepared technical reports, high-quality GIS map layouts and dashboards based on project findings, spatial analysis results and environmental assessments.</div>
+        </div>
+      </div>
+
+      <!-- additional experience tag: extra competencies (software) -->
+      <div class="section">
+        <div class="section-title">
+          <i class="fas fa-laptop-code"></i> <span>Software & Environment</span>
+        </div>
+        <div class="skill-list">
+          <span class="skill-tag">ArcGIS Enterprise</span>
+          <span class="skill-tag">ArcGIS Pro</span>
+          <span class="skill-tag">QGIS</span>
+          <span class="skill-tag">ERDAS Imagine</span>
+          <span class="skill-tag">AutoCAD</span>
+          <span class="skill-tag">Google Earth Engine (basic)</span>
+          <span class="skill-tag">MS Excel Analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer line optional -->
+  <div style="background: #fefefe; border-top: 1px solid #e2edf2; padding: 1rem 2rem; text-align: center; font-size: 0.7rem; color: #6f8f9f;">
+    <i class="fas fa-globe"></i> Divyanshu Arele — GIS & Remote Sensing Portfolio | MPSET Qualified | 3+ Years Experience
+  </div>
+</div>
+</body>
+</html>
